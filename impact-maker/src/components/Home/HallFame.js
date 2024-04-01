@@ -11,7 +11,11 @@ const HallFame = ()=>{
                     <div className="africa-container">
                         <h3>AFRICA IMPACT <br/>HALL-OF-FAME</h3>
                         <div className="fine-text">
-                            <p>A Class for The Best of the Best</p>
+                            <p>
+                               <marquee behaviour="scroll" direction="left" scrollamount="5">
+                               A Class for The Best of the Best
+                               </marquee>
+                            </p>
                         </div>
                     </div>
                     <div className="au-description">

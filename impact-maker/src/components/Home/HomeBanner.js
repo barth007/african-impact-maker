@@ -1,5 +1,7 @@
 import award from "../assets/homeImages/award.png";
 import Button from "../Shared/Button";
+import {ReactTyped} from 'react-typed';
+
 
 const HomeBanner = ()=>{
     return (
@@ -8,7 +10,16 @@ const HomeBanner = ()=>{
             <div className="banner-section__wrapper">
                 <div className="banner-text__content">
                     <div className="banner-bold__text">
-                        <h1>AFRICA IMPACT <br/>HALL OF FAME</h1>
+                        <h1>
+                            AFRICA {" "}
+                            <ReactTyped strings={["IMPACT<br/> HALL OF FAME"]} 
+                            typeSpeed={100} 
+                            loop
+                            backSpeed={10}
+                            showCursor={true}
+                            />
+
+                        </h1>
 
                     </div>
                     <div className="banner-regular__text">
@@ -48,6 +59,9 @@ const HomeBanner = ()=>{
             display: flex;
             flex-direction: column;
             gap: 70px;
+        }
+        .banner-bold__text{
+            height: 100px;
         }
         .banner-bold__text, .banner-regular__text{
             width: 100%;

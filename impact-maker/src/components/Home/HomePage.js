@@ -1,4 +1,5 @@
 import Footer from "../Footer/Footer"
+import Membership from "./Membership"
 import Navbar from "../Header/Navbar"
 import AboutSection from "./AboutSection"
 import HallFame from "./HallFame"
@@ -11,6 +12,7 @@ const HomePage = () =>{
         <HomeBanner/>
         <section className="HallFame-frame"><HallFame/></section>
         <AboutSection/>
+        <Membership/>
         <Footer/>
         <style jsx>{`
         .HallFame-frame{
