@@ -48,7 +48,6 @@ const HighlightCards = ({ image, text }) => {
             position: absolute;
             top: 30%;
             left: 0;
-            // margin-top: 62px;
             max-width: 100%;
             height: auto;
             background-color: rgba(0, 0, 0, 0.6);
