@@ -39,12 +39,12 @@ const Navbar = ()=>{
                      <li><Link to="/membership" className='sidebar-color'>Membership</Link></li>
                      <li><Link to="/social_impact" className='sidebar-color'>Social Impact</Link></li>
                      <li><Link to="/stories" className='sidebar-color'>Stories</Link></li>
-                     <li><Link to="/about" className='sidebar-color'>Take Action</Link></li>
+                     <li ><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
                  </ul>)
                 }
                 <ul>
                     <li ><Link to="/"><img className="impact-logo" src={logo} alt="Impact makers"/></Link></li>
-                    <li className='hideOnMobile'><Link ClassName="active" to="/login">About</Link></li>
+                    <li className='hideOnMobile'><Link ClassName="active" to="/about">About</Link></li>
                     <li className='hideOnMobile'><Link activeClassName="active" to="/hall_of_fame">Hall of Fame</Link></li>
                     <li className='hideOnMobile'><Link activeClassName="active" to="/membership">Membership</Link></li>
                     <li className='hideOnMobile'><Link activeClassName="active" to="/social_impact">Social Impact</Link></li>
