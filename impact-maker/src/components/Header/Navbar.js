@@ -1,20 +1,28 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import menu from "../assets/icon/nav/menu.svg";
 import close from "../assets/icon/nav/close.svg";
 import logo from "../assets/logos/logo.png";
 import Button from '../Shared/Button';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ()=>{
     const [isShow, setShow] = useState(false);
     const showSideBar=(event)=>{
         event.stopPropagation();
         setShow(!isShow);
+        if (!isShow){
+            document.body.classList.add('no-scroll');
+        } else{
+            document.body.classList.remove('no-scroll')
+        }
     }
     const closeSideBar = ()=>{
-        setShow(isShow);
+        setShow(false);
+        document.body.classList.remove('no-scroll');
     }
+  
     const navigate = useNavigate();
     const handleclick = ()=>{
         navigate('/login')
@@ -25,21 +33,21 @@ const Navbar = ()=>{
             <nav>
         
     {isShow && (<ul className="sidebar"> 
-                    <li onClick={closeSideBar}><a href=""><img src={close}/></a></li>  
-                     <li><a href="">About</a></li>
-                     <li><a href="">Hall of Fame</a></li>
-                     <li><a href="">Membership</a></li>
-                     <li><a href="">Social Impact</a></li>
-                     <li><a href="">Take Action</a></li>
-                     <li><a href="">Stories</a></li>
+                    <li onClick={closeSideBar}><a><FontAwesomeIcon  className='timesIcon' icon={faTimes} /></a></li>  
+                     <li><Link to="/about" className='sidebar-color'>About</Link></li>
+                     <li><Link to="/hall_of_fame" className='sidebar-color'>Hall of Fame</Link></li>
+                     <li><Link to="/membership" className='sidebar-color'>Membership</Link></li>
+                     <li><Link to="/social_impact" className='sidebar-color'>Social Impact</Link></li>
+                     <li><Link to="/stories" className='sidebar-color'>Stories</Link></li>
+                     <li><Link to="/about" className='sidebar-color'>Take Action</Link></li>
                  </ul>)
                 }
                 <ul>
                     <li ><Link to="/"><img className="impact-logo" src={logo} alt="Impact makers"/></Link></li>
-                    <li className='hideOnMobile'><Link to="/about">About</Link></li>
-                    <li className='hideOnMobile'><Link to="/hall_of_fame">Hall of Fame</Link></li>
-                    <li className='hideOnMobile'><Link to="/membership">Membership</Link></li>
-                    <li className='hideOnMobile'><Link to="/social_impact">Social Impact</Link></li>
+                    <li className='hideOnMobile'><Link ClassName="active" to="/login">About</Link></li>
+                    <li className='hideOnMobile'><Link activeClassName="active" to="/hall_of_fame">Hall of Fame</Link></li>
+                    <li className='hideOnMobile'><Link activeClassName="active" to="/membership">Membership</Link></li>
+                    <li className='hideOnMobile'><Link activeClassName="active" to="/social_impact">Social Impact</Link></li>
                     <li className='hideOnMobile'><Link to="/stories">Stories</Link></li>
                     <li className='hideOnMobile'><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
                     <li className='MenuButton' onClick={showSideBar }><a><img src={menu}/></a></li>
@@ -80,7 +88,10 @@ const Navbar = ()=>{
                 font-size: var(--normal-font-size);
             }
             header nav a:hover{
-                background-color: var(--nav-hover-color);
+                color: var(--first-primary-color);
+            }
+            .active{
+                color: var(--first-primary-color);
             }
             nav li:first-child{
                 margin-right: auto;
@@ -110,12 +121,28 @@ const Navbar = ()=>{
                 width: 100%;
                 height: 100%;
             }
+            .sidebar-color:hover{
+                color: var(--first-primary-color);
+            }
+            .sidebar-color{
+                color: white;
+            }
             @media (max-width: 991px){
                 .hideOnMobile{
                     display:none;
                 }
                 .MenuButton{
                     display: block;
+                }
+                .timesIcon{
+                    font-size: 2.5rem;
+                    color: var(--white);
+                }
+                .no-scroll {
+                    overflow: hidden;
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
                 }
             }
             @media (max-width: 500px){

@@ -258,6 +258,10 @@ const Footer=( )=>{
                 .copyright small{
                     font-size: 0.5rem;
                 }
+                .footer-links ul li:hover{
+                   
+                    transform: scale(1.1); 
+                }
                 
             }
             @media (max-width: 500px){

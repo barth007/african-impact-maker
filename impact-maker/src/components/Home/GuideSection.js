@@ -145,7 +145,7 @@ const GuideSection = ()=>{
                 height: 654px;
             }
             .guide__text-wrapper{
-                padding: 30px 17px;
+                padding: 30px 9px;
 
             }
             .guide__textContent .guide_overlay .guide__text-wrapper p{
