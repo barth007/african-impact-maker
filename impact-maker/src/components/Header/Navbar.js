@@ -27,6 +27,11 @@ const Navbar = ()=>{
     const handleclick = ()=>{
         navigate('/login')
     }
+    useEffect(() => {
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+    }, []);
     return(
         <>
         <header>
