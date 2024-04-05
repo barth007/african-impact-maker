@@ -84,15 +84,17 @@ const Footer=( )=>{
             </footer>
             <style jsx>{`
             footer {
-                // position: fixed;
+                position: relative;
                 bottom: 0;
                 width: 100%;
                 height: auto;
                 // margin-bottom: -90%;
                 background-color: var(--second-primary-color);
+                z-index: 999;
             }
             .footer-wapper{
             //    max-width: 1200px;
+                 
             }
             .section-footer-wrapper{
                 display: flex;

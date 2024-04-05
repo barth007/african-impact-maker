@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import {Link, useNavigate} from "react-router-dom";
 import menu from "../assets/icon/nav/menu.svg";
 import close from "../assets/icon/nav/close.svg";
 import logo from "../assets/logos/logo.png";
+import Button from '../Shared/Button';
 
 
 const Navbar = ()=>{
@@ -12,6 +14,10 @@ const Navbar = ()=>{
     }
     const closeSideBar = ()=>{
         setShow(isShow);
+    }
+    const navigate = useNavigate();
+    const handleclick = ()=>{
+        navigate('/login')
     }
     return(
         <>
@@ -29,14 +35,14 @@ const Navbar = ()=>{
                  </ul>)
                 }
                 <ul>
-                    <li ><a href=""><img className="impact-logo" src={logo} alt="Impact makers"/></a></li>
-                    <li className='hideOnMobile'><a href="">About</a></li>
-                    <li className='hideOnMobile'><a href="">Hall of Fame</a></li>
-                    <li className='hideOnMobile'><a href="">Membership</a></li>
-                    <li className='hideOnMobile'><a href="">Social Impact</a></li>
-                    <li className='hideOnMobile'><a href="">Take Action</a></li>
-                    <li className='hideOnMobile'><a href="">Stories</a></li>
-                    <li className='MenuButton' onClick={showSideBar }><a href=""><img src={menu}/></a></li>
+                    <li ><Link to="/"><img className="impact-logo" src={logo} alt="Impact makers"/></Link></li>
+                    <li className='hideOnMobile'><Link to="/about">About</Link></li>
+                    <li className='hideOnMobile'><Link to="/hall_of_fame">Hall of Fame</Link></li>
+                    <li className='hideOnMobile'><Link to="/membership">Membership</Link></li>
+                    <li className='hideOnMobile'><Link to="/social_impact">Social Impact</Link></li>
+                    <li className='hideOnMobile'><Link to="/stories">Stories</Link></li>
+                    <li className='hideOnMobile'><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
+                    <li className='MenuButton' onClick={showSideBar }><a><img src={menu}/></a></li>
                 </ul>
                 
             </nav>
@@ -45,8 +51,13 @@ const Navbar = ()=>{
 
             <style jsx>{`
             header{
-                background-color: var(--white);
+                top: 0;
+                position: sticky;   
+                // background-color: var(--white);
                 box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                box-shadow: -10px 0 10px rba(0, 0, 0, 0.1);
+                z-index: 9999;
 
             }
             header nav ul{
@@ -65,7 +76,7 @@ const Navbar = ()=>{
                 text-decoration: none;
                 display: flex;
                 align-items: center;
-                color: black;
+                color: var(--third-primary-color);
                 font-size: var(--normal-font-size);
             }
             header nav a:hover{

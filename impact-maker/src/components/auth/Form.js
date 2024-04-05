@@ -2,6 +2,8 @@ import flags from "../assets/homeImages/flags.jpeg"
 import award2 from "../assets/homeImages/award2.png"
 import React from 'react';
 import Button from "../Shared/Button";
+import {Link} from "react-router-dom";
+
 
 const Form=({
     children,
@@ -12,6 +14,7 @@ const Form=({
 
 })=>{
     const date = new Date;
+  
     return(
         <>
         <section className="form__container">
@@ -29,7 +32,7 @@ const Form=({
                             })}
                             {isSignIn ? <div className="forgot__password"><a href>Forgot Password?</a></div> : null}
                            <div className="form__button"> <Button text={button_text}/></div>
-                           {isSignIn ? <div className="signup__account"><p>Don't have an account? </p><a href>Sign Up</a></div>: <div className="signup__account"><p>I have an account? </p><a href>Sign In</a></div>}
+                           {isSignIn ? <div className="signup__account"><p>Don't have an account? </p><Link to="/register">Sign UP</Link></div>: <div className="signup__account"><p>I have an account? </p><Link to="/login">Sign In</Link></div>}
                         </form>
                         
                     </div>
@@ -160,6 +163,7 @@ const Form=({
             font-size: var(--normal-font-size);
             color: var(--white);
             cursor: pointer;
+            text-decoration: none;
         }
         .signup__account a:hover{
             color: var(--first-primary-color);
