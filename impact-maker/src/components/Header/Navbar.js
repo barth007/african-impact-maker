@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import {NavLink, Link, useNavigate} from "react-router-dom";
 import menu from "../assets/icon/nav/menu.svg";
 import logo from "../assets/logos/logo.png";
 import Button from '../Shared/Button';
@@ -38,21 +38,21 @@ const Navbar = ()=>{
         
     {isShow && (<ul className="sidebar"> 
                     <li onClick={closeSideBar}><a><FontAwesomeIcon  className='timesIcon' icon={faTimes} /></a></li>  
-                     <li><Link to="/about" className='sidebar-color'>About</Link></li>
-                     <li><Link to="/hall_of_fame" className='sidebar-color'>Hall of Fame</Link></li>
-                     <li><Link to="/membership" className='sidebar-color'>Membership</Link></li>
-                     <li><Link to="/social_impact" className='sidebar-color'>Social Impact</Link></li>
-                     <li><Link to="/stories" className='sidebar-color'>Stories</Link></li>
+                     <li><NavLink to="/about" className='sidebar-color'>About</NavLink></li>
+                     <li><NavLink to="/hall_of_fame" className='sidebar-color'>Hall of Fame</NavLink></li>
+                     <li><NavLink to="/membership" className='sidebar-color'>Membership</NavLink></li>
+                     <li><NavLink to="/social_impact" className='sidebar-color'>Social Impact</NavLink></li>
+                     <li><NavLink to="/stories" className='sidebar-color'>Stories</NavLink></li>
                      <li ><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
                  </ul>)
                 }
                 <ul>
                     <li ><Link to="/"><img className="impact-logo" src={logo} alt="Impact makers"/></Link></li>
-                    <li className='hideOnMobile'><Link ClassName="active" to="/about">About</Link></li>
-                    <li className='hideOnMobile'><Link activeClassName="active" to="/hall_of_fame">Hall of Fame</Link></li>
-                    <li className='hideOnMobile'><Link activeClassName="active" to="/membership">Membership</Link></li>
-                    <li className='hideOnMobile'><Link activeClassName="active" to="/social_impact">Social Impact</Link></li>
-                    <li className='hideOnMobile'><Link to="/stories">Stories</Link></li>
+                    <li className='hideOnMobile'><NavLink  to="/about">About</NavLink></li>
+                    <li className='hideOnMobile'><NavLink  to="/hall_of_fame">Hall of Fame</NavLink></li>
+                    <li className='hideOnMobile'><NavLink  to="/membership">Membership</NavLink></li>
+                    <li className='hideOnMobile'><NavLink  to="/social_impact">Social Impact</NavLink></li>
+                    <li className='hideOnMobile'><NavLink to="/stories">Stories</NavLink></li>
                     <li className='hideOnMobile'><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
                     <li className='MenuButton' onClick={showSideBar }><a><img src={menu}/></a></li>
                 </ul>
