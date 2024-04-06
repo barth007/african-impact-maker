@@ -176,6 +176,12 @@ const Form=({
             .main__form--background{
                 max-width: 700px;
             }
+            .form__wrapper h1 {
+                padding: 18px 0;
+            }
+            .main__form--background {
+                margin: 27px auto;
+            }
 
         }
         @media (max-width: 640px){
