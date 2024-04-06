@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import menu from "../assets/icon/nav/menu.svg";
-import close from "../assets/icon/nav/close.svg";
 import logo from "../assets/logos/logo.png";
 import Button from '../Shared/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -155,7 +154,7 @@ const Navbar = ()=>{
                     width: 100%;
 ;                }
                 header nav li{
-                    // height: 50px;
+                    height: 70px;
                 }
             }
             
