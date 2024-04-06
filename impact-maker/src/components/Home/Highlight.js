@@ -73,6 +73,10 @@ const HighlightCards = ({ image, text }) => {
                 width: 180px;
                 height: 180px;
             }
+            .overlays{
+                height: 120px;
+                top: 20%;
+            }
         }
         @media (max-width: 400px){
             .card-container {

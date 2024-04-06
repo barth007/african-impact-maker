@@ -155,7 +155,7 @@ const Navbar = ()=>{
                     width: 100%;
 ;                }
                 header nav li{
-                    height: 50px;
+                    // height: 50px;
                 }
             }
             
