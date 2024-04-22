@@ -21,7 +21,7 @@ const Membership = ()=>{
                                     largest gathering of Changemakers in Africa, all year long
                                 </p>
                             </div>
-                            <div className="button-section"><Button text="Join Us"/></div>
+                            <div className="button-section"><Button text="Join Us" backgroundColor="rgba(0, 0, 0, 0)" hoverColor="rgba(255,102,0,.5803921568627451)" border="1px solid white"/></div>
                         </div>
                     </div>
 
@@ -32,13 +32,18 @@ const Membership = ()=>{
         </section>
         <style jsx>{`
         .membership-wrapper{
+            width: 100%;
+            background-color: var(--first-primary-color);
+            padding: 20px 0;
+            
+        }
+        .membership-container{
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 40px auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #FFF;
-            margin-bottom: 80px;
+
         }
         .membership-content{
             gap: 20px;
@@ -60,24 +65,24 @@ const Membership = ()=>{
             flex-direction: column;
             line-height: normal;
             max-width: 560px;
-            height: 800px;
+            height: 700px;
         }
         .Imagery{
             aspect-ratio: 0.76;
             object-fit: cover;
             width: 100%;
             border-radius: 8px;
-            height: 800px;
+            height: 700px;
         }
         .text-wrapper{
             border-radius: 12px;
-            border: 1px solid var(--first-primary-color);
+            border: 1px solid var(--white);
             display: flex;
             flex-grow: 1;
             flex-direction: column;
             align-items: start;
             width: 100%;
-            padding: 150px 20px;
+            padding: 100px 20px;
         }
         .textContent .text-wrapper h2{
             color: var(--third-primary-color);
@@ -120,6 +125,12 @@ const Membership = ()=>{
             .text-wrapper{
                 padding: 30px 17px;
 
+            }
+
+        }
+        @media (max-width: 700px){
+            .textContent {
+                max-width: 600px;
             }
 
         }

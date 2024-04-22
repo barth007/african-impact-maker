@@ -6,6 +6,7 @@ import HallFame from "./HallFame"
 import HomeBanner from "./HomeBanner"
 import Hightlight from "./Highlight"
 import GuideSection from "./GuideSection"
+import Advert from "./Advert"
 
 const HomePage = () =>{
     return(
@@ -17,6 +18,7 @@ const HomePage = () =>{
         <Membership/>
         <Hightlight/>
         <GuideSection/>
+        <Advert/>
         <Footer/>
         <style jsx>{`
         .HallFame-frame{

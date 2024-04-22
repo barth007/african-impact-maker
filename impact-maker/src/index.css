@@ -4,7 +4,7 @@
   padding: 0;
 }
 :root{
-  --first-primary-color: rgba(243, 116, 0, 255);
+  --first-primary-color: rgb( 233,155, 21);
   --second-primary-color: rgb(128,14,19);
   --third-primary-color: rgba(1, 71, 35, 255);
   --sidebar-background-color: rgba(49, 49, 49, 0.8);

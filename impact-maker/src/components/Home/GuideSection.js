@@ -23,7 +23,7 @@ const GuideSection = ()=>{
                                 rising of Africa.
                                 </p>
                             </div>
-                            <div className="button-section"><Button text="Join Us"/></div>
+                            <div className="button-section"><Button text="Join Us" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/></div>
                         </div>
                        </div>
                     </div>
@@ -65,6 +65,7 @@ const GuideSection = ()=>{
             display: flex;
             flex-direction: column;
             line-height: normal;
+            max-width: 760px;
             width: 560px;
             height: 800px;
             position: relative;
@@ -78,6 +79,7 @@ const GuideSection = ()=>{
             position: absolute;
             top: 0;
             left: 0;
+            
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
@@ -142,6 +144,7 @@ const GuideSection = ()=>{
             .guide__textContent {
                 flex-direction: row;
                 max-width: 760px;
+                width: 760px;
                 height: 654px;
             }
             .guide__text-wrapper{
@@ -150,6 +153,13 @@ const GuideSection = ()=>{
             }
             .guide__textContent .guide_overlay .guide__text-wrapper p{
                 width: 92%;
+                
+            }
+
+        }
+        @media(max-width: 700px){
+            .guide__textContent {
+                max-width: 600px;
                 
             }
 
@@ -164,6 +174,7 @@ const GuideSection = ()=>{
             }
             .guide__textContent {
                 max-width: 540px;
+                
             }
             
 

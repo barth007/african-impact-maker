@@ -20,7 +20,7 @@ const AboutSection = () =>{
                         CSR Funders, and other Development Partners working to achieve the Africa we want. Membership comes
                         with its benefits; joining The Africa Academy opens all kinds of doors.
                     </p>
-                    <div className="about-button"><Button text="View More"/></div>
+                    <div className="about-button"><Button text="View More" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/></div>
                 </div>
                
 

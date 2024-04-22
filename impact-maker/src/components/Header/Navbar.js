@@ -43,7 +43,7 @@ const Navbar = ()=>{
                      <li><NavLink to="/membership" className='sidebar-color'>Membership</NavLink></li>
                      <li><NavLink to="/social_impact" className='sidebar-color'>Social Impact</NavLink></li>
                      <li><NavLink to="/stories" className='sidebar-color'>Stories</NavLink></li>
-                     <li ><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
+                     <li ><a href=""><Button  onClick={handleclick} text="Take action" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/></a></li>
                  </ul>)
                 }
                 <ul>
@@ -53,7 +53,7 @@ const Navbar = ()=>{
                     <li className='hideOnMobile'><NavLink  to="/membership">Membership</NavLink></li>
                     <li className='hideOnMobile'><NavLink  to="/social_impact">Social Impact</NavLink></li>
                     <li className='hideOnMobile'><NavLink to="/stories">Stories</NavLink></li>
-                    <li className='hideOnMobile'><a href=""><Button  onClick={handleclick} text="Take action"/></a></li>
+                    <li className='hideOnMobile'><a href=""><Button  onClick={handleclick} text="Take action" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,0.5803921568627451)" border="none"/></a></li>
                     <li className='MenuButton' onClick={showSideBar }><a><img src={menu}/></a></li>
                 </ul>
                 
@@ -65,10 +65,9 @@ const Navbar = ()=>{
             header{
                 top: 0;
                 position: sticky;   
-                // background-color: var(--white);
                 box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(10px);
-                box-shadow: -10px 0 10px rba(0, 0, 0, 0.1);
+                background-color: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(16px);
                 z-index: 9999;
 
             }

@@ -11,13 +11,14 @@ const HomeBanner = ()=>{
                 <div className="banner-text__content">
                     <div className="banner-bold__text">
                         <h1>
-                            AFRICA {" "}
+                            {/* AFRICA {" "}
                             <ReactTyped strings={["IMPACT<br/> HALL OF FAME"]} 
                             typeSpeed={100} 
                             loop
                             backSpeed={10}
                             showCursor={true}
-                            />
+                            /> */}
+                            AFRICA IMPACT<br/> HALL OF FAME
 
                         </h1>
 
@@ -30,7 +31,7 @@ const HomeBanner = ()=>{
                         </p>
                     </div>
                     <div className="banner-button">
-                        <Button text="Learn More"/>
+                        <Button text="Learn More" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/>
                     </div>
                 </div>
                 <div className="banner-image__container">
@@ -69,7 +70,7 @@ const HomeBanner = ()=>{
         .banner-bold__text h1{
             font-size: var(--biggest-font-size);
             font-weight: 700;
-            color: var(--first-primary-color);
+            color: var(--white);
         }
         .banner-regular__text p{
             font-size: var(--medium-font-size);

@@ -31,7 +31,7 @@ const Form=({
                                 return <div key={index} className="input__field">{child}</div>
                             })}
                             {isSignIn ? <div className="forgot__password"><a href>Forgot Password?</a></div> : null}
-                           <div className="form__button"> <Button text={button_text}/></div>
+                           <div className="form__button"> <Button text={button_text} backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/></div>
                            {isSignIn ? <div className="signup__account"><p>Don't have an account? </p><NavLink to="/register">Sign UP</NavLink></div>: <div className="signup__account"><p>I have an account? </p><NavLink to="/login">Sign In</NavLink></div>}
                         </form>
                         
