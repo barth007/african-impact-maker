@@ -107,7 +107,7 @@ const Navbar = ()=>{
                 width: 250px;
                 z-index: 999;
                 background-color: var(--sidebar-background-color);
-                backdrop-filter: blur(10px);
+                backdrop-filter: blur(16px);
                 box-shadow: -10px 0 10px rba(0, 0, 0, 0.1);
                 display: flex;
                 flex-direction: column;
