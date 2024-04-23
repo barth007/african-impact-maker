@@ -82,8 +82,9 @@ const GuideSection = ()=>{
             
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(250, 250, 250, 0.6);
             border: 1px solid var(--second-primary-color);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
         }
         .guide__imagery{
@@ -106,7 +107,7 @@ const GuideSection = ()=>{
         .guide__textContent .guide_overlay .guide__text-wrapper h2{
             font-size: var(--h3-font-size);
             font-weight: 700;
-            color: var(--white);
+            color: var(--third-primary-color);
             margin-bottom: 30px;
         }
         .guide__textContent .guide_overlay .guide__text-wrapper h2 span{
@@ -114,7 +115,7 @@ const GuideSection = ()=>{
             color: var(--first-primary-color);
         }
         .guide__textContent .guide_overlay .guide__text-wrapper p{
-            color: var(--white);
+            color: var(--third-primary-color);
             margin-top: 49px;
             font-weight: 500;
             line-height: 2rem;

@@ -9,6 +9,7 @@ const HomeBanner = ()=>{
         <section className="banner-section">
             <div className="banner-section__wrapper">
                 <div className="banner-text__content">
+                    <div className="banner_overlay"></div>
                     <div className="banner-bold__text">
                         <h1>
                             {/* AFRICA {" "}
@@ -33,6 +34,7 @@ const HomeBanner = ()=>{
                     <div className="banner-button">
                         <Button text="Learn More" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/>
                     </div>
+                    
                 </div>
                 <div className="banner-image__container">
                     <img src={award} alt="Africa Impact Makers"/>
@@ -86,39 +88,69 @@ const HomeBanner = ()=>{
             // width: 100%;
         }
         @media (max-width: 991px){
+            
+         
             .banner-image__container{
                 display: none;
             }
             .banner-text__content{
+                position: relative;
+                background-image: url(${award});
+                background-size: contain;
+                background-position: right top;
+                background-repeat: no-repeat;
                 max-width: 800px;
                 margin: 0 auto;
                 padding: 0 20px;
-                align-items: center;
+                align-items: left;
+            }
+            .banner_overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(2px);
+            }
+            .banner-bold__text{
+                height: 30px;
+                
+            }
+            .banner-bold__text, .banner-regular__text, .banner-button{
+                z-index:999;
+
+            }
+            .banner-regular__text{
+                width: 60%;
             }
             .banner-bold__text h1{
-                text-align: center;
-                font-size: 2.5rem;
+                text-align: left;
+                font-size: 22px;
             }
             .banner-regular__text p{
-                text-align: center;
-                font-size: 1.4rem;
+                text-align: left;
+                font-size: 16px;
             }
             .banner-button{
-                justify-content: center;
-                align-items: center;
+                justify-content: start;
+                align-items: left;
                 padding-bottom: 30px;
             }
         }
-        @media (max-width: 400px){
-            .banner-bold__text h1{
-                font-size: 2rem;
-            }
-            .banner-regular__text p{
-                font-size: 1.2rem;
+        @media (max-width: 700px){
+            .banner-regular__text{
+                width: 70%;
             }
 
         }
+        @media (max-width: 500px){
+            .banner-regular__text{
+                width: 100%;
+            }
 
+        }
+        
         `}</style>
         </>
     )
