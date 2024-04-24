@@ -9,7 +9,7 @@ import Button from '../Shared/Button';
             <div className="humanitaran-background-wrapper ">
                 <div className="humanitaran-overlay"></div>
                 <div className="humanitaran-header">
-                    <h1>Join <span> THE AFRICAN ACADEMY</span></h1>
+                    {/* <h1>Join <span> THE AFRICAN ACADEMY</span></h1> */}
                 </div>
                         
             </div>

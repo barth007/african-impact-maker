@@ -23,7 +23,7 @@ const GuideSection = ()=>{
                                 rising of Africa.
                                 </p>
                             </div>
-                            <div className="button-section"><Button text="Join Us" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/></div>
+                            <div className="button-section"><Button text="Participate" backgroundColor="var(--first-primary-color)" hoverColor="rgba(255,102,0,.5803921568627451)" border="none"/></div>
                         </div>
                        </div>
                     </div>
