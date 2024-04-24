@@ -1,17 +1,17 @@
 import flags from "../assets/homeImages/flags.jpeg";
 import Button from "../Shared/Button";
 
-const AboutSection = () =>{
+const FlagSection = () =>{
     return (
         <>
         <section className="about-section__wrapper">
             <div className="background-wrapper ">
-                <div className="overlay">
+                <div className="overlay"></div>
                 <div className="about-header">
                     <h1>About <span>THE AFRICA ACADEMY</span></h1>
                 </div>
                 
-                </div>
+                
                 
             </div>
             <div className="about-description">
@@ -36,16 +36,20 @@ const AboutSection = () =>{
                 background-image: url('${flags}');
                 background-size: cover;
                 background-position: center;
+                height: 150px;
                 position: relative;
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
                 
 
             }
             .overlay{
-                positon: absolute;
+                position: absolute;
                 top: 0;
                 left: 0;
-                max-width: 100%;
-                height: 200px;
+                width: 100%;
+                height: 150px;
                 background-color: rgba(0, 0, 0, 0.6);
                 
                 display: flex;
@@ -58,6 +62,7 @@ const AboutSection = () =>{
                 max-width: 1200px;
                 margin: 0 auto;
                 width: 100%;
+                z-index: 999;
                 // text-align: center;
                 
         
@@ -100,6 +105,10 @@ const AboutSection = () =>{
                     padding: 0 20px;
                     padding-bottom: 20px;
                 }
+                .background-wrapper, .overlay{
+                    height: 100px;
+                }
+                  
                
 
             }
@@ -110,9 +119,7 @@ const AboutSection = () =>{
                 .about-header h1{
                     font-size: 1.2rem;
                 }
-                .overlay{
-                    height: 150px;
-                }
+                
 
             }
 
@@ -120,4 +127,4 @@ const AboutSection = () =>{
         </>
     )
 }
-export default AboutSection;
+export default FlagSection;
