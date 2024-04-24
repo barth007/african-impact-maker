@@ -20,7 +20,8 @@ import Button from '../Shared/Button';
                     </div>
                     <div className='humanitaran-text__container'>
                     <div className='humanitaran-text__regular'>
-                        <p>To participate at the biggest 
+                    <p>Join <span> THE AFRICA ACADEMY</span></p>
+                        <p>to participate at the biggest 
                             annual Humanitarian Festival
                             for Impact Makers in Africa.
                             </p>
@@ -131,6 +132,7 @@ import Button from '../Shared/Button';
             .humanitaran-text__regular p{
                 font-size: var(--normal-font-size);
                 color: var(--white);
+                text-align: center;
             }
             .humanitaran-text__regular p span{
                 color: var(--first-primary-color);
