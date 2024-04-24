@@ -8,7 +8,7 @@ const FlagSection = () =>{
             <div className="background-wrapper ">
                 <div className="overlay"></div>
                 <div className="about-header">
-                    <h1>About <span>THE AFRICA ACADEMY</span></h1>
+                    <h1>About <span>THE AFRICAN ACADEMY</span></h1>
                 </div>
                 
                 

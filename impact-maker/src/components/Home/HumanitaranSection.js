@@ -9,18 +9,18 @@ import Button from '../Shared/Button';
             <div className="humanitaran-background-wrapper ">
                 <div className="humanitaran-overlay"></div>
                 <div className="humanitaran-header">
-                    <h1>Join <span> THE AFRICA ACADEMY</span></h1>
+                    <h1>Join <span> THE AFRICAN ACADEMY</span></h1>
                 </div>
                         
             </div>
             <div className="humanitaran-frame__container">
                 <div className='frame__wrapper'>
                     <div className='humanitaran-text__bold'>
-                        <h1>AFRICA HUMANITARIAN<br/>FESTIVAL AND AWARDS</h1>
+                        <h1>AFRICAN HUMANITARIAN<br/>FESTIVAL AND AWARDS</h1>
                     </div>
                     <div className='humanitaran-text__container'>
                     <div className='humanitaran-text__regular'>
-                    <p>Join <span> THE AFRICA ACADEMY</span></p>
+                    <p>Join <span> THE AFRICAN ACADEMY</span></p>
                         <p>to participate at the biggest 
                             annual Humanitarian Festival
                             for Impact Makers in Africa.
