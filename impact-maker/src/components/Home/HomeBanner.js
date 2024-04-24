@@ -26,9 +26,8 @@ const HomeBanner = ()=>{
                     </div>
                     <div className="banner-regular__text">
                         <p>
-                            The Highest Global Honor for Impact Makers
-                            in Africa - designed in the most elite style
-                            to spotlight top performing Changemakers
+                        The Highest Global Honor 
+                        for Impact Makers and top performing Changemakers in Africa
                         </p>
                     </div>
                     <div className="banner-button">
@@ -47,6 +46,9 @@ const HomeBanner = ()=>{
             width: 100%;
             height: auto;
             background-color: var(--coffee-brown);
+            background: rgb(0,0,0);
+            background: linear-gradient(9deg, rgba(0,0,0,0.9023984593837535) 15%, rgba(233,155,21,0.6615021008403361) 93%);
+
         }
         .banner-section__wrapper{
             max-width: 1200px;
@@ -103,6 +105,7 @@ const HomeBanner = ()=>{
                 margin: 0 auto;
                 padding: 0 20px;
                 align-items: left;
+                gap: 30px;
             }
             .banner_overlay{
                 position: absolute;
@@ -110,10 +113,13 @@ const HomeBanner = ()=>{
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.6);
+                // background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(1px);
+                
             }
             .banner-bold__text{
-                height: 30px;
+                height: 48px;
+                margin-top: 150px;
                 
             }
             .banner-bold__text, .banner-regular__text, .banner-button{
@@ -138,6 +144,7 @@ const HomeBanner = ()=>{
             }
         }
         @media (max-width: 700px){
+            
             .banner-regular__text{
                 width: 70%;
             }
@@ -146,6 +153,16 @@ const HomeBanner = ()=>{
         @media (max-width: 500px){
             .banner-regular__text{
                 width: 100%;
+                margin-top: 70px;
+                margin-bottom: 10px;
+            }
+            .banner-text__content{
+                gap: 15px;
+            }
+            .banner-bold__text{
+                height: 0px;
+                margin-top: 100px;
+
             }
 
         }
