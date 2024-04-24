@@ -84,7 +84,7 @@ const GuideSection = ()=>{
             height: 100%;
             background-color: rgba(250, 250, 250, 0.6);
             border: 1px solid var(--second-primary-color);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(1px);
             border-radius: 20px;
         }
         .guide__imagery{
