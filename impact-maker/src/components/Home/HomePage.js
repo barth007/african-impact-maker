@@ -1,12 +1,13 @@
 import Footer from "../Footer/Footer"
 import Membership from "./Membership"
 import Navbar from "../Header/Navbar"
-import AboutSection from "./AboutSection"
 import HallFame from "./HallFame"
 import HomeBanner from "./HomeBanner"
 import Hightlight from "./Highlight"
 import GuideSection from "./GuideSection"
 import Advert from "./Advert"
+import FlagSection from "./FlagSection"
+import HumanitaranSection from "./HumanitaranSection"
 
 const HomePage = () =>{
     return(
@@ -14,10 +15,11 @@ const HomePage = () =>{
         <Navbar/>
         <HomeBanner/>
         <section className="HallFame-frame"><HallFame/></section>
-        <AboutSection/>
+        <FlagSection/>
         <Membership/>
         <Hightlight/>
         <GuideSection/>
+        <HumanitaranSection/>
         <Advert/>
         <Footer/>
         <style jsx>{`
