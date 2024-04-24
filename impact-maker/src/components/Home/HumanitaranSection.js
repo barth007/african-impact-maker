@@ -95,6 +95,7 @@ import Button from '../Shared/Button';
                 border-radius:  10px 10px 0 0;
                 background-color: var(--white);
                 margin-bottom: 40px;
+                margin-top: -1px;
             }
             .frame__wrapper{
                 display: flex;
